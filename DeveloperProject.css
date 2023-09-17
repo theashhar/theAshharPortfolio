@@ -1,0 +1,267 @@
+* { font-family: 'Montserrat', sans-serif, monospace, 'Dancing Script', cursive;
+    color: aliceblue;
+    transition: 0.2s cubic-bezier(.43,.28,0,1.01);
+    }
+    a {
+        display: contents;
+    }
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+        background: var(--bgBolor); 
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #44535b; 
+        border-radius: 6px; 
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #546a76;
+    }    
+    ::selection {
+        background-color: var(--selectColor); 
+        color: aliceblue;
+    }
+    :root {
+        --mainHeading: 50px;
+        --subHeading: 35px;
+        --smallFont: 18px;
+        --themeColor: #28c1e0;
+        --bgBolor: #161c1e;
+        --boxColor: #21272a;
+        --selectColor: #44535b;
+        --hoverColor: #05333c;
+    }
+    .Designhero h1 {
+        font-size: calc(var(--mainHeading)*.8);
+    }
+    h1 {
+        font-size: var(--mainHeading);
+    }
+    body {
+        background-color: var(--bgBolor);
+        margin: 0;
+        position: relative;
+        overflow-x: hidden;
+    }
+    .navbar {
+        width: 100%;
+        height: 8vh;
+        display: flex;
+            justify-content: space-between;
+        margin: 1vh 0 0 40px;
+    }
+    .logo {
+        width: 140px;
+        cursor: pointer;
+    }
+    ul {
+        font-size: calc(var(--smallFont)*0.9);
+        text-decoration: none;
+        list-style: none;
+        margin: 0;
+        gap: 2%;
+        padding: 0;
+    }
+    li {
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        position: relative;
+    } 
+    .resume {
+        border: 1px solid var(--themeColor);
+        border-radius: 4px;
+        padding: 8px;
+        background-color: var(--bgBolor);
+        font-size: calc(var(--smallFont)*0.9);
+        transition: 0.2s cubic-bezier(.43,.28,0,1.01) ;
+    }  
+    li:not(.slash, .resume)::after {
+        content:'';
+        position: absolute;
+        bottom: -10px;
+        height: 2px;
+        width: 60%;
+        left: -40%;
+        background-color: var(--themeColor);
+        border-radius: 50%;
+        transition: 0.2s cubic-bezier(.43,.28,0,1.01);
+        transform: scaleX(0);
+    }
+    li:not(.slash):hover::after {
+        transform: scaleX(1) translate(100%);
+        color: var(--themeColor);
+    }
+    .resume:hover {
+        background-color: var(--hoverColor);
+    }
+    .resume:not(#navResume):hover {
+        transform: translateY(-3px);
+    }
+    li:not(.slash):hover {
+        color: var(--themeColor);
+    }
+    .slash {
+        cursor: default;
+        user-select: none;
+    }
+    .headerItems {
+        width: 60%;
+        height: 100%;
+        display: flex;
+            justify-content: center;
+            align-items: center ;
+        padding-right: 2%;
+    }
+    .Designhero {    
+        height: 80vh;
+        width: 100vw;
+        display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        margin: 1vh 0 8vh 0;
+        text-align: center;
+        position: relative;
+        /* overflow-y: hidden; */
+    }
+        #centerHheading {
+            z-index: 4;
+            position: absolute;
+            cursor: default;
+        }
+        .neutron {
+            width: 490px;
+            height: 490px;
+            position: absolute;
+            display: flex;
+                justify-content: center;
+                align-items: center;
+            position: relative;
+            border-radius: 50%;
+            z-index: 1;
+            transform: scale(0.5);
+            transition: 0.2s cubic-bezier(.43,.28,0,1.01) ;
+        }
+        .light {
+            width: 450px;
+            height: 450px;
+            position: absolute;
+            background-color: var(--themeColor);
+            filter: blur(190px);
+            opacity: 0.8;
+            z-index: -2;
+        }
+        .light:hover, .neutron:hover {
+            transform: scale(1);
+            opacity: 0.8;
+        }
+        .JS_electon {
+            width: 25%;
+            /* background-color: rgb(90, 106, 106);     */
+            position: absolute;
+            /* border: 1px dashed var(--themeColor); */
+            border-radius: 50%;
+            padding: 110px;
+            animation: rotationClock 9s infinite linear;
+        }
+            .JS_electon::before{
+                content: url("Assets/js.svg");
+                filter: blur(1px);
+                width: 32px;
+                position: absolute;
+                left: 0px;
+                top: 0px;    
+                border-radius: 50%;
+                animation: rotationAntiClock 7s infinite linear;
+                opacity: 0.9;
+            }
+    
+        .REACT_electon {
+                width: 50%;
+                position: absolute;
+                /* background-color: #05333c;   */
+                padding: 110px;
+                /* border-radius: 50%; */
+                animation: rotationClock 17s infinite linear;
+            }
+            .REACT_electon::before{
+                content: url("Assets/reactjs.svg");
+                filter: blur(0.7px);
+                width: 30px;
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+                border-radius: 50%;
+                animation: rotationAntiClock 8s infinite linear;
+                opacity: 0.8;
+            }
+        .CSS_electon {
+                width: 60%;
+                /* background-color: rgb(90, 106, 106); */
+                position: absolute;
+                /* border: 12px dotted deeppink; */
+                padding: 110px;
+                border-radius: 50%;
+                animation: rotationClock 25s infinite linear;
+            }
+            .CSS_electon::before{
+                content: url("Assets/css.svg");
+                filter: blur(1px);
+                width: 26px;
+                /* background-color: deeppink; */
+                position: absolute;
+                left: 0px;        
+                top: -50px;
+                border-radius: 90px;
+                animation: rotationAntiClock 15s infinite linear;
+                opacity: 0.7;
+            }
+        .HTML_electon {
+                width: 75%;
+                /* background-color: rgb(90, 106, 106); */
+                position: absolute;
+                padding: 110px;
+                /* border-radius: 50%; */
+                animation: rotationClock 40s infinite linear;
+            }
+            .HTML_electon::before{
+                content: url("Assets/html.svg");
+                filter: blur(1px);
+                width: 20px;
+                position: absolute;
+                right: 0px;        
+                top: -50px;
+                border-radius: 50%;
+                animation: rotationAntiClock 14s infinite linear;
+                opacity: 0.6;
+            }
+        /* .CANVA_electon {
+                width: 85%;
+                position: absolute;
+                padding: 110px;
+/
+                animation: rotationClock 52s infinite linear;
+            }
+            .CANVA_electon::before{
+                content: url("Assets/canva.svg");
+                filter: blur(0.5px);
+                width: 22px;
+                position: absolute;
+                right: 0px;        
+                bottom: -50px;
+                border-radius: 50%;
+                animation: rotationAntiClock 8s infinite linear;
+                opacity: 0.5;
+            } */
+    @keyframes rotationClock {
+    0% {
+        transform: rotate(360deg);
+    }
+    }
+    @keyframes rotationAntiClock {
+    0% {
+        transform: rotate(-360deg);
+    }
+    }

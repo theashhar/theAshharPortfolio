@@ -2,6 +2,9 @@
 color: aliceblue;
 transition: 0.2s cubic-bezier(.43,.28,0,1.01);
 }
+a {
+    display: contents;
+}
 ::-webkit-scrollbar {
     width: 6px;
 }
@@ -29,8 +32,11 @@ transition: 0.2s cubic-bezier(.43,.28,0,1.01);
     --selectColor: #44535b;
     --hoverColor: #05333c;
 }
-h1 {
+.Designhero h1 {
     font-size: calc(var(--mainHeading)*.8);
+}
+h1 {
+    font-size: var(--mainHeading);
 }
 body {
     background-color: var(--bgBolor);
@@ -262,10 +268,153 @@ li:not(.slash):hover {
 }
 }
 
-.projects {
-    height: 72vh;
+.logos {
+    height: 100vh;
     width: 100vw;
     display: flex;
-        justify-content: space-evenly;
+    flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
     margin: 0 0 8vh 0;
 }
+/* .logos p {
+    color: rgb(182, 189, 194);
+} */
+.HeadingProject {
+    margin-top: 40px;
+    /* padding: 0; */
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    margin-bottom: 5vh;    
+}
+.HeadingProject::after {
+    content:'';
+    position: absolute;
+    bottom: -8px;
+    height: 2px;
+    width: 40%;
+    left: 30%;
+    background-color: var(--themeColor);
+}
+.pacificCalm, .aayu {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10%;
+}
+.titles {
+    /* height: 10%; */
+    width: 80%;
+    display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        gap: 10%;
+    cursor: default;
+}
+.titles p {
+
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.titles p::after {
+    content:'';
+    position: absolute;
+    bottom: -10px;
+    height: 2px;
+    width: 60%;
+    left: -40%;
+    background-color: var(--themeColor);
+    border-radius: 50%;
+    transition: 0.2s cubic-bezier(.43,.28,0,1.01);
+    transform: scaleX(0);
+}
+.titles p:hover::after {
+    transform: scaleX(1) translate(100%);
+    color: var(--themeColor);
+}
+.titles p:hover, .preview.hover,  .preview2.hover {
+    color: var(--themeColor);
+}
+
+.slides {
+    height: 500px;
+    width: 900px;
+    display: flex;
+        justify-content: center;
+        gap: 10%;
+        transition: all 1s ease;
+        animation: slideit 1s linear 0s 1 ;
+        border-radius: 30px;
+    /* overflow: scroll; */
+    }
+.slide, .slide2 {
+    height: 500px;
+    width: 900px;
+    object-fit: contain;
+    border-radius: 30px;
+} 
+
+.slide.preview {
+    content: url(Assets/pacificcalm_Preview.png);
+}
+ .slide.psychology {
+    content: url(Assets/pacificcalm_psycology.png);
+}
+.slide.mockups {
+    content: url(Assets/pacificcalm_mockup.png);
+}
+
+.slide2.preview2 {
+    content: url(Assets/aayu_preview.png);
+}
+ .slide2.psychology2 {
+    content: url(Assets/aayu_psycology.png);
+}
+.slide2.mockups2 {
+    content: url(Assets/aayu_mockup.png);
+}
+
+
+
+/* 
+.carousel-container {
+    max-width: 1200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-image {
+    max-width: 100%;  Ensure images don't exceed the container's width 
+    height: auto;
+}
+
+.carousel-nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-nav p {
+    display: inline;
+    cursor: pointer;
+    margin: 0 10px;
+    color: blue;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+     For screens with a maximum width of 768px (typical mobile devices) 
+    .carousel-container {
+        max-width: 300px;
+    }
+} */

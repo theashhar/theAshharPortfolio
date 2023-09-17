@@ -2,6 +2,9 @@
 color: aliceblue;
 transition: 0.2s cubic-bezier(.43,.28,0,1.01);
 }
+a {
+    display: contents;
+}
 ::-webkit-scrollbar {
     width: 6px;
 }
