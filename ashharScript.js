@@ -1,5 +1,3 @@
-
-// const headingElements = document.querySelectorAll('[subHeadings]')
 const previewTextElement = document.getElementById('preview')
 const previewTextElement2 = document.getElementById('preview2')
 const psychologyTextElement = document.getElementById('psychology')
@@ -71,6 +69,60 @@ function handleClickMock() {
     psychologyTextElement2.classList.remove('hover')
     mockupsTextElement2.classList.add('hover')
 }
+
+
+
+let currentIndex = 0;
+
+function moveSlider(step) {
+  const slider = document.querySelector('.slider');
+  const slideWidth = document.querySelector('.logoSlide').clientWidth;
+  const maxIndex = slider.children.length - 1;
+
+  currentIndex += step;
+
+  // Ensure currentIndex doesn't go beyond the last set of images
+  const maxAllowedIndex = maxIndex - 2;
+  currentIndex = Math.min(currentIndex, maxAllowedIndex);
+
+  // Disable or enable the "Next" button based on currentIndex
+  const nextButton = document.querySelector('.next-button');
+  nextButton.disabled = currentIndex === maxAllowedIndex;
+
+  currentIndex = Math.max(currentIndex, 0);
+
+  slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+
+
+// Disable the "Next" button initially if we start at the last set of images
+const nextButton = document.querySelector('.next-button');
+nextButton.disabled = currentIndex === maxAllowedIndex;
+
+
+
+
+
+
+
+
+
+
+
+// const scrollThreshold = 50;
+// // Add scroll event listener
+// document.addEventListener('wheel', handleScroll);
+
+// function handleScroll(event) {
+//   if (event.deltaY > scrollThreshold) {
+//     // Scrolled down, move to the next set of images
+//     moveSlider(1);
+//   } else if (event.deltaY < -scrollThreshold) {
+//     // Scrolled up, move to the previous set of images
+//     moveSlider(-1);
+//   }
+// }
+
 
 
 
