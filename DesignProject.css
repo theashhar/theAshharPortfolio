@@ -268,15 +268,17 @@ body {
 }
 }
 
-.logos {
+.logos, .posterDiv {
     height: 250vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        
     margin: 0 0 8vh 0;
+}
+.posterDiv {
+height: 120vh;
 }
 .logoHeading {
     height: 100px;
@@ -391,7 +393,7 @@ margin: 0 auto;
     content: url(Assets/aayu_mockup.png);
 }
 
-.otherLogos {
+.otherLogos, .posters {
     height: 25%;
     width: 900px;
     display: flex;
@@ -399,22 +401,10 @@ margin: 0 auto;
         justify-content: center;
         align-items: center;
 }
-/* .logoSlide {
-    height: 200px;
-    width: 900px;
-    background-color: antiquewhite;
-    position: relative;
+.posters {
+    height: 100%;
+
 }
-.logoSlide img {
-    width: 290px;
-    height: 200px;
-    object-fit: cover;
-    object-position: center;
-} */
-
-
-
-
 .slider-container {
     width: 900px; /* Adjust the width as needed to show 3 images at a time */
     height: 200px;
@@ -423,10 +413,10 @@ margin: 0 auto;
     border-radius: 10px;
   }
   
-  .slider {
+  .slider, .sliderPoster {
     display: flex;
-    transition: transform 0.3s ease-in-out;
-  }
+    transition: 0.5s cubic-bezier(.79,.09,.24,.96);
+}
   
   .logoSlide {
     flex: 0 0 33.33%; /* Each slide takes up 33.33% of the container width */
@@ -438,13 +428,14 @@ margin: 0 auto;
     height: 200px;
     object-fit: cover;
     object-position: center;
+    border-radius: 10px;
   }
   
-  .prev-button, .next-button {
+  .prev-button, .prev-button2, .next-button, .next-button2 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #333;
+    background-color: var(--hoverColor);
     color: #fff;
     border: none;
     padding: 15px 10px;
@@ -452,63 +443,29 @@ margin: 0 auto;
     opacity: .8;
   }
   
-  .prev-button {
+  .prev-button, .prev-button2 {
     left: 0;
   }
-  
-  .next-button {
+  .next-button, .next-button2 {
     right: 0;
   }
-  
-
-/* .logoSlide ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-} */
-/* .carouselSlide {
-    position: absolute;
-        inset: 0;
-    width: 100%;
+  .posters {
     height: 100%;
-    object-fit: cover;
-    object-position: center;
-} */
-
-
-/* 
-.carousel-container {
-    max-width: 1200px;
+  }
+  .slider-container-posters {
+    width: 100%; /* Adjust the width as needed to show 3 images at a time */
+    height: 700px; /*: ratio */
     overflow: hidden;
     position: relative;
-}
+    object-position: center;
 
-.carousel-images {
-    display: flex;
-    transition: transform 0.5s ease;
-}
+  }
 
-.carousel-image {
-    max-width: 100%;  Ensure images don't exceed the container's width 
-    height: auto;
-}
-
-.carousel-nav {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.carousel-nav p {
-    display: inline;
-    cursor: pointer;
-    margin: 0 10px;
-    color: blue;
-    text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-     For screens with a maximum width of 768px (typical mobile devices) 
-    .carousel-container {
-        max-width: 300px;
-    }
-} */
+  .posterSlide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 700px;
+        object-fit: contain;
+    object-position: center;
+    border-radius: 10px;
+  }
