@@ -110,7 +110,6 @@ function moveSliderPoster(step) {
 
 // NAVBAR
 const hamburgerElement = document.querySelectorAll('[hamburger]')
-
 hamburgerElement.forEach(ham => {
   ham.addEventListener('click', navbarSlide)
 })
@@ -131,12 +130,8 @@ function toggleHamburger() {
       hamburgerCross.style.display = 'block';
   }
 }
+transitionSlide()
 function transitionSlide() {
-  const headerItemsElement = document.getElementById('headerItems')
-  if (headerItemsElement.style.opacity === '0') {
-    headerItemsElement.style.opacity = '1'
-    }
-    else {
-      headerItemsElement.style.opacity = '0'
-    }
+  const headerItemsElement = document.querySelector('.headerItemsMobile')
+  headerItemsElement.classList.toggle('open')
 }

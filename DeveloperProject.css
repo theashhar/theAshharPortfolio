@@ -25,7 +25,7 @@
     :root {
         --mainHeading: 40px;
         --subHeading: 35px;
-        --smallFont: 18px;
+        --smallFont: 16px;
         --themeColor: #28c1e0;
         --bgBolor: #161c1e;
         --boxColor: #21272a;
@@ -275,10 +275,10 @@
     }
     }
     .socials {
-        height: 10vh;
+        height: 40px;
         width: 100%;
         position: absolute;
-            bottom: 10;
+            bottom: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -286,21 +286,11 @@
     .socialIcons {
         height: 100%;
         width: 40%;
-
         display: flex;
             /* flex-direction: column; */
             justify-content: space-between;
             align-items: center;
             gap: 15px;
-    }
-    .mail {
-        height: 100%;
-        position: absolute;
-            right: 4vw;
-        display: flex;
-            flex-direction: column;
-            justify-content: end;
-            align-items: end;  
     }
     .socialIcons img {
         width: 15px;
@@ -363,8 +353,9 @@
         position: absolute;
         object-fit: cover;
         border-radius: 8px;
-        z-index: 2;
+        z-index: 1;
       }
+
       .projectImg:hover::after {
         opacity: 0;
     transform: scale(1.2);    
@@ -378,7 +369,7 @@
         z-index: 2;
         opacity: 0.3;
         border-radius: 8px;
-        mix-blend-mode: exclusion;
+        mix-blend-mode: color-burn;
         /* screen
         overlay
         soft-light
@@ -405,10 +396,9 @@
         height: 100%;
         width: 50%;
         position: absolute;
-        /* background-color: #44535b; */
-        /* opacity: 0.3; */
         display: flex;
             flex-direction: column;
+            /* justify-content: space-around; */
     }
     .textDiv.right {
         right: 0;
@@ -416,8 +406,6 @@
     }
     .textDiv.left {
         left: 0;
-        /* align-items: flex-end; */
-
     }
     .textDiv h2 {
         margin-bottom: 0;
@@ -437,24 +425,24 @@
         text-align: right;
     }
     .techStack {
-        width: 70%;
+        width: 90%;
         /* height: 20%; */
         display: flex;
+            flex-wrap: wrap;
+            align-content: center;
         gap: 15px;
         position: absolute;
         bottom: 40px; 
     }
     .techStack.right {
-        width: 100%;
-        padding: 0;
-        margin: 0;
+        width: 90%;
         justify-content: flex-end;
-        flex-wrap: wrap;
-        align-content: center;
     }
 
     .techStack p {
         font-family: monospace;
+        padding: 0;
+        margin: 0;
     }
     .techStack.links {
         position: absolute;
@@ -486,18 +474,28 @@
         }
         .projectImg img {
             height: 110%;
+            filter: blur(2px);
         }
+          .projectImg::after {
+            height: 110%;
+            /* display: none; */
+          }
         .featuredProjects {
             /* height: 1600px; */
             width: 80vw;
         }
         .projectImg {
             width: 100%;
-            opacity: 0.2;
+            opacity: 0.4;
         }
         .textDiv {
+            height: 90%;
             width: 95%;
             padding: 5%;
+        justify-content: space-around;
+        }
+        .textDiv h2 {
+            margin: 0;
         }
         .textDiv.right {
             left: 0;
@@ -523,7 +521,9 @@
         }
         .techStack.links.right{
             justify-content: flex-start;
-    
+        }
+        .socialIcons {
+            width: 85%;
         }
 
 
@@ -562,7 +562,6 @@
             width: 20px;
             z-index: 8;
             display: none;
-    
         }
         .hamburger.cross {
             position: fixed;

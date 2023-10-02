@@ -30,7 +30,7 @@ a {
     color: aliceblue;
 }
 :root {
-    --mainHeading: 50px;
+    --mainHeading: 40px;
     --subHeading: 35px;
     --smallFont: 16px;
     --themeColor: #28c1e0;
@@ -41,6 +41,9 @@ a {
 }
 h1 {
     font-size: var(--mainHeading);
+}
+.heroText h1{
+    font-size: calc(var(--mainHeading)*1.2); 
 }
 body {
     background-color: var(--bgBolor);
@@ -401,9 +404,6 @@ width: 330px;
     height: 80%;
     text-align: center;
     }
-    /* .heroText h1 {
-        margin: 0;
-    } */
     .companiesPanel {
         height: 150px;
     }
