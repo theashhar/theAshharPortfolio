@@ -11,9 +11,9 @@
     <title>Developer Project</title>
 </head>
 <body>
-    <div class="navbar" id="navbar">
-        <a class="logo" href="index.html"><img src="Assets/theAshharLogo.svg" alt="logo"></a>                   
-        <ul class="headerItems">
+    <header class="navbar" id="navbar">
+        <a  href="index.html"><img class="logo" src="Assets/theAshharLogo.svg" alt="logo"></a>                   
+        <ul class="headerItems desktop">
             <a href="index.html">
                 <li>Home</li></a>
             <li class="slash">|</li>
@@ -23,11 +23,31 @@
             <a href="DesignProject.html">
                 <li>Design Projects</li></a>
             <li class="slash">|</li>
-            <li>Contact</li>
+            <a href="#getInTouch">
+                <li>Contact</li></a>
             <li class="slash">|</li>
             <button class="resume" id="navResume">Resume</button>
-        </ul>
-    </div>
+        </ul>    
+        <div class="navbar mobile">
+            <img id="hamburger " class="hamburger ham" hamburger src="Assets/hamburger.svg" >
+            <img id="hamburger " class="hamburger cross" hamburger src="Assets/cross.svg" >
+            <ul class="headerItemsMobile">
+                <a href="index.html">
+                    <li>Home</li></a>
+                <li class="slash">|</li>
+                <a href="DeveloperProject.html">
+                    <li>Developer Projects</li></a>
+                <li class="slash">|</li>
+                <a href="DesignProject.html">
+                    <li>Design Projects</li></a>
+                <li class="slash">|</li>
+                <a href="#getInTouch">
+                    <li>Contact</li></a>
+                <li class="slash">|</li>
+                <button class="resume" id="navResume">Resume</button>
+            </ul>
+        </div>
+    </header>
 
     <div class="Designhero">
         <h1 id="centerHheading">Where Ideation<br> Meets Execution</h1>
@@ -105,7 +125,7 @@
            <p id="mail">ashhar.work@gmail.com</p>
         </div>
     </div>
-    <script src="/CWH_course/theAshhar.com/ashharScript.js"></script>
+    <script src="ashharScript.js"></script>
 
 </body>
 </html>
