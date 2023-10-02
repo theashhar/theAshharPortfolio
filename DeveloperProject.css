@@ -23,7 +23,7 @@
         color: aliceblue;
     }
     :root {
-        --mainHeading: 50px;
+        --mainHeading: 40px;
         --subHeading: 35px;
         --smallFont: 18px;
         --themeColor: #28c1e0;
@@ -33,7 +33,7 @@
         --hoverColor: #05333c;
     }
     .Designhero h1 {
-        font-size: calc(var(--mainHeading)*.8);
+        font-size: var(--mainHeading);
     }
     h1 {
         font-size: var(--mainHeading);
@@ -264,4 +264,193 @@
     0% {
         transform: rotate(-360deg);
     }
+    }
+    .socials {
+        height: 10vh;
+        width: 100%;
+        position: absolute;
+            bottom: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    }
+    .socialIcons {
+        height: 100%;
+        width: 40%;
+
+        display: flex;
+            /* flex-direction: column; */
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+    }
+    .mail {
+        height: 100%;
+        position: absolute;
+            right: 4vw;
+        display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: end;  
+    }
+    .socialIcons img {
+        width: 15px;
+    }
+    
+    .vLine {
+        width: 20%;
+        border: 1px dashed aliceblue;
+        /* background-color: aliceblue; */
+    }
+
+.featuredProjectsDiv {
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+.featuredProjects {
+    height: 1600px;
+    width: 70vw;
+    padding: 0 40px;
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+    .ProjectHeading {
+        /* padding-top: 70px; */
+        cursor: pointer;
+        position: relative;
+        top: 0;
+        margin-bottom: 80px;    
+        margin-top: 0;
+    }
+    .ProjectHeading::after {
+        content:'';
+        position: absolute;
+        bottom: -8px;
+        height: 1px;
+        width: 40%;
+        left: 30%;
+        background-color: var(--themeColor);
+    }
+    .project {
+        height: 330px; /*(effective = 450px)*/
+        width: 100%;
+        position: relative;
+        /* background-color: rgb(64, 64, 64); */
+        margin-bottom: 150px;
+    }
+    .projectImg {
+        height: 100%;
+        width: 60%;
+        object-fit: cover;
+        position: absolute;
+        border-radius: 8px;
+    }
+    .projectImg img {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        object-fit: cover;
+        border-radius: 8px;
+        z-index: 2;
+      }
+      .projectImg:hover::after {
+        opacity: 0;
+    transform: scale(1.2);    
+}
+    .projectImg::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: var(--hoverColor);
+        z-index: 2;
+        opacity: 0.3;
+        border-radius: 8px;
+        mix-blend-mode: exclusion;
+        /* screen
+        overlay
+        soft-light
+         multiply
+        hard-light
+        color-dodge
+        color-burn
+        difference
+        exclusion */
+        transition: all 0.3s cubic-bezier(.43,.28,0,1.01);
+    }
+    .projectImg:hover::after {
+        opacity: 0;
+    transform: scale(1.1);
+    cursor: pointer;
+    }
+    .projectImg.right {
+        left: 0;
+    }
+    .projectImg.left {
+        right: 0;
+    }
+    .textDiv {
+        height: 100%;
+        width: 50%;
+        position: absolute;
+        /* background-color: #44535b; */
+        /* opacity: 0.3; */
+        display: flex;
+            flex-direction: column;
+    }
+    .textDiv.right {
+        right: 0;
+        align-items: flex-end;
+    }
+    .textDiv.left {
+        left: 0;
+        /* align-items: flex-end; */
+
+    }
+    .textDiv h2 {
+        margin-bottom: 0;
+    }
+    .Projectsubtitle {
+        margin-top: 0;
+        font-size: small;
+    }
+    .projectDescription {
+        background-color: #05333c;
+        padding: 20px;
+        border-radius: 8px;
+        opacity: 0.9;
+        z-index: 4;
+    }
+    .projectDescription.right{
+        text-align: right;
+
+    }
+    .techStack {
+        width: 70%;
+        display: flex;
+        gap: 15px;
+        position: absolute;
+        bottom: 40px; 
+    }
+    .techStack.right {
+        justify-content: flex-end;
+    }
+
+    .techStack p {
+        font-family: monospace;
+    }
+    .techStack.links {
+        position: absolute;
+        bottom: 10px;
+    }
+    .techStack.links.right{
+        justify-content: flex-end;
+
+    }
+    .techStack.links img {
+        width: 20px;
     }

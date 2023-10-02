@@ -12,9 +12,9 @@
 </head>
 <body>
     
-    <div class="navbar" id="navbar">
-        <a class="logo" href="index.html"><img src="Assets/theAshharLogo.svg" alt="logo"></a>                   
-        <ul class="headerItems">
+    <header class="navbar" id="navbar">
+        <a  href="index.html"><img class="logo" src="Assets/theAshharLogo.svg" alt="logo"></a>                   
+        <ul class="headerItems desktop">
             <a href="index.html">
                 <li>Home</li></a>
             <li class="slash">|</li>
@@ -24,18 +24,38 @@
             <a href="DesignProject.html">
                 <li>Design Projects</li></a>
             <li class="slash">|</li>
-            <li>Contact</li>
+            <a href="#getInTouch">
+                <li>Contact</li></a>
             <li class="slash">|</li>
             <button class="resume" id="navResume">Resume</button>
         </ul>    
-    </div>
+        <div class="navbar mobile">
+            <img id="hamburger " class="hamburger ham" hamburger src="Assets/hamburger.svg" >
+            <img id="hamburger " class="hamburger cross" hamburger src="Assets/cross.svg" >
+            <ul id='headerItems' class="headerItemsMobile">
+                <a href="index.html">
+                    <li>Home</li></a>
+                <li class="slash">|</li>
+                <a href="DeveloperProject.html">
+                    <li>Developer Projects</li></a>
+                <li class="slash">|</li>
+                <a href="DesignProject.html">
+                    <li>Design Projects</li></a>
+                <li class="slash">|</li>
+                <a href="#getInTouch">
+                    <li>Contact</li></a>
+                <li class="slash">|</li>
+                <button class="resume" id="navResume">Resume</button>
+            </ul>
+        </div>
+    </header>
     <div class="hero">
         <div class="mainImage">
-            <img src="Assets/mainPhoto4.png">
+            <img src="Assets/mainPhoto2.png">
         </div>
         <div class="heroText">
             <br><h1><span id="intro">Hello I'm</span><br><span id="name"> Ashhar</span> Ali Ahmed</h1><p>       I Bringing Ideas to Life Through Code & Creativity. I'm a front-end developer and designer dedicated to turning creative concepts into captivating digital realities.</p><br><br>
-            <p> <span id="code"> &ltdeveloper&gt</span>  &emsp;&emsp; <span id="creativity">Designer.</span></p>
+            <p id="devAndDesign"> <span id="code"> &ltdeveloper&gt</span>  &emsp;&emsp; <span id="creativity">Designer.</span></p>
             
         </div>        
     </div>
@@ -78,23 +98,6 @@
             </div>
         </div>
     </div> 
-     <!-- <div class="slider-container">
-        <div class="gradient-background"></div>
-        <div class="slider">
-            <img src="image1.jpg" alt="Image 1">
-            <img src="image2.jpg" alt="Image 2">
-            <img src="image3.jpg" alt="Image 3">
-            <img src="image4.jpg" alt="Image 4">
-            <img src="image5.jpg" alt="Image 5">
-            <img src="image6.jpg" alt="Image 6">
-        </div>
-        <div class="navigation">
-            <div class="circle active"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-        </div>
-    </div> -->
-
     <div class="servicesContainer">
         <div class="services">
             <h1 class="whatIDo">What I <span>Do</span></h1>
@@ -112,7 +115,7 @@
                 </div>
                 <div class="darkBox">
                     <img src="Assets/brandDesign.svg">
-                    <h3>Graphic <br>Design</h2>
+                    <h3>Graphic Design</h2>
                     <div class="icons">
                         <img src="Assets/ps.svg">
                         <img src="Assets/illustrator.svg">
@@ -172,8 +175,8 @@
             <a href="https://www.linkedin.com/in/ashhar-ali-ahmed-971aaa193/" target="_blank"><img src="Assets/linkedin.svg"></a>
             <a href="https://www.instagram.com/the_ashhar/" target="_blank"><img src="Assets/instagram.svg"></a>
             <a href="https://twitter.com/the_ashhar" target="_blank"><img src="Assets/twitter.svg"></a>
+            <div class="vLine"></div>
             <a href="https://www.behance.net/ashharaliahmed" target="_blank"><img src="Assets/behance.svg"></a>
-           <div class="vLine"></div>
         </div>
         <div class="mail">
             <p id="mail">ashhar.work@gmail.com</p>

@@ -2,149 +2,52 @@
 <html>
 <head>
     <style>
-        body {
-            background-color: rgb(52, 52, 52);
-        }
-        .otherLogos, .posters {
-    height: 25%;
-    width: 900px;
+.image-container {
     display: flex;
-    flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image {
+    width: 33.33%; /* Each image takes up one-third of the container */
+    transition: transform 0.3s;
+}
+
+#image1 {
+    transform: scale(1);
+}
+
+#image2 {
+    transform: scale(1.1);
+}
+
+#image3 {
+    transform: scale(1);
+}
+
+.image:hover {
+    transform: scale(1);
+}
+
+#image3:hover {
+    transform: scale(1.1);
 }
 
 
-
-
-
-.slider-container {
-    width: 900px; /* Adjust the width as needed to show 3 images at a time */
-    height: 200px;
-    overflow: hidden;
-    position: relative;
-    border-radius: 10px;
-  }
-  
-  
-.otherLogos, .posters {
-    height: 25%;
-    width: 900px;
-    display: flex;
-    flex-direction: column;
-        justify-content: center;
-        align-items: center;
-}
-
-.slider-container {
-    width: 900px; /* Adjust the width as needed to show 3 images at a time */
-    height: 200px;
-    overflow: hidden;
-    position: relative;
-    border-radius: 10px;
-  }
-  
-  .slider, .sliderPoster {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .logoSlide {
-    flex: 0 0 33.33%; /* Each slide takes up 33.33% of the container width */
-    /* margin: 0 10px 0 10px ; */
-  }
-  
-  .slider img {
-    width: 290px;
-    height: 200px;
-    object-fit: cover;
-    object-position: center;
-  }
-  
-  .prev-button, .next-button, .next-button2 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 15px 10px;
-    cursor: pointer;
-    opacity: .8;
-  }
-  
-  .prev-button {
-    left: 0;
-  }
-  
-  .next-button, .next-button2 {
-    right: 0;
-  }
-
-  .posters {
-    height: 30%;
-  }
-  .slider-container-posters {
-    width: 660px; /* Adjust the width as needed to show 3 images at a time */
-    height: 825px; /*: ratio */
-    overflow: hidden;
-    position: relative;
-    border-radius: 10px;
-  }
-  .posterSlide {
-    flex: 0 0 100%;
-  }
-  .posterSlide img {
-    width: 660px;
-    height: 825px;
-    object-fit: cover;
-    object-position: center;
-  }
-        @media (max-width: 768px) {
-            /* For screens with a maximum width of 768px (typical mobile devices) */
-            .carousel-container {
-                max-width: 300px;
-            }
-        }
     </style>
 </head>
 <body>
-    <div class="otherLogos">
-        <h2 class="HeadingProject">Other Noteworthy Logo Projects</h2>
-            <div class="sliderPoster">
-                <img class="posterSlide" src="Assets/conor vs usman poster.png" alt="">
-                <img class="posterSlide" src="Assets/Brochure cover.png" alt="">
-                <img class="posterSlide" src="Assets/4 hero poster.png.png" alt="">
-                <img class="posterSlide" src="Assets/TradeHunt.svg" alt="">
-                <img class="posterSlide" src="Assets/indlogo.svg" alt="">
-                <img class="posterSlide" src="Assets/niket.png" alt="">
-                <img class="posterSlide" src="Assets/corpologo.svg" alt="">
-                <img class="posterSlide" src="Assets/variable.svg" alt="">
-                <img class="posterSlide" src="Assets/emediciti.png" alt="">
-                <img class="posterSlide" src="Assets/NTH.jpg" alt="">
+  
+  <div class="image-container">
+    <img src="Assets/mainPhoto1.png" alt="Image 1" class="image" id="image1">
+    <img src="Assets/mainPhoto2.png" alt="Image 2" class="image" id="image2">
+    <img src="Assets/mainPhoto3.png" alt="Image 3" class="image" id="image3">
+</div>
 
-            <button class="prev-button" onclick="moveSliderPoster(-1)">&#8678;</button>
-            <button class="next-button2" onclick="moveSliderPoster(1)">&#8680;</button>
-          </div>
-         </div>
+  
+  
     <script>
-        const carouselContainer = document.querySelector('.carousel-container');
-        const carouselImages = document.querySelector('.carousel-images');
-        const navButtons = document.querySelectorAll('.carousel-nav p');
-
-        let currentSlide = 0;
-
-        navButtons.forEach((button, index) => {
-            button.addEventListener('click', () => {
-                currentSlide = index;
-                updateCarousel();
-            });
-        });
-
-        function updateCarousel() {
-            const translateX = -currentSlide * carouselContainer.clientWidth;
-            carouselImages.style.transform = `translateX(${translateX}px)`;
-        }
+       
 
         updateCarousel();
         

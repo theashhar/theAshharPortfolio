@@ -49,11 +49,13 @@ body {
     height: 8vh;
     display: flex;
         justify-content: space-between;
-    margin: 1vh 0 0 40px;
+    margin: 1vh 0 11vh 0px;
 }
 .logo {
-    width: 140px;
+    width: 160px;
     cursor: pointer;
+    padding: 0 0 0 20px;
+
 }
 .navbar ul {
     font-size: calc(var(--smallFont)*0.9);
@@ -304,7 +306,7 @@ margin: 0 auto;
     content:'';
     position: absolute;
     bottom: -8px;
-    height: 2px;
+    height: 1px;
     width: 40%;
     left: 30%;
     background-color: var(--themeColor);
@@ -338,7 +340,7 @@ margin: 0 auto;
 .titles p::after {
     content:'';
     position: absolute;
-    bottom: -10px;
+    bottom: -8px;
     height: 2px;
     width: 60%;
     left: -40%;
@@ -469,3 +471,93 @@ margin: 0 auto;
     object-position: center;
     border-radius: 10px;
   }
+  .socials {
+    height: 10vh;
+    width: 100%;
+    position: absolute;
+        bottom: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.socialIcons {
+    height: 100%;
+    width: 40%;
+
+    display: flex;
+        /* flex-direction: column; */
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+}
+.mail {
+    height: 100%;
+    position: absolute;
+        right: 4vw;
+    display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;  
+}
+.socialIcons img {
+    width: 15px;
+}
+
+.vLine {
+    width: 20%;
+    border: 1px dashed aliceblue;
+    /* background-color: aliceblue; */
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar.mobile {
+        display: none;
+    }
+
+    }
+@media only screen and (max-width: 600px){
+    .headerItems.desktop {
+    display: none;
+    }
+    .headerItems.mobile {
+        position: fixed;
+            top: -7px;
+            right: 0px;
+            padding-top: 20px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+            flex-direction: column;
+            /* justify-content: flex-start; */
+            align-items: center ;
+        padding-right: 2%;
+        background-color: #05333c;
+        overflow-y: hidden;
+        z-index: 6;
+        transition: 0.5s cubic-bezier(.43,.28,0,1.01);
+
+        opacity: 0;
+    } 
+    /* .headerItems::before {
+        content: "";
+        width: 100vw;
+        height: 100vh;
+        background-color: #05333c;
+    } */
+    .slash {
+        display: none;
+    }
+    .hamburger {
+        position: absolute;
+            top: 20px;
+            right: 10px;
+        width: 20px;
+        z-index: 7;
+    }
+    .hamburger.cross {
+        display: none;
+    }
+    .logo {
+        width: 130px;
+    }
+}
