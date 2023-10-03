@@ -140,6 +140,18 @@ li:not(.slash):hover {
 
 .mainImage img {
 width: 330px;
+transition: 0.4s cubic-bezier(.43,.28,0,1.01);
+
+}
+/* .mainImage {
+position: relative;
+} */
+
+.mainImage img:hover {
+    content: url("Assets/mainPhoto1.png");
+    /* opacity: 0; */
+transform: scale(1.03);
+cursor: pointer;
 }
 .heroText {
     width: 35%;
@@ -393,10 +405,6 @@ width: 330px;
         /* margin: 0 0 8vh 0; */
 
     }
-    /* .mainImage  {
-        position: absolute;
-        left: -60px;
-    } */
     .mainImage img {
         width: 200px;
         }

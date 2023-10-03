@@ -356,10 +356,10 @@
         z-index: 1;
       }
 
-      .projectImg:hover::after {
+      /* .projectImg:hover::after {
         opacity: 0;
     transform: scale(1.2);    
-}
+} */
     .projectImg::after {
         content: "";
         position: absolute;
