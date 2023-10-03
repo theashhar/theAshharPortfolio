@@ -137,7 +137,7 @@ li:not(.slash):hover {
     /* overflow-y: hidden; */
 }
     #centerHheading {
-        font-size: calc(var(--mainHeading) * 0.8);
+        font-size: var(--mainHeading);
         z-index: 4;
         position: absolute;
         cursor: default;
@@ -290,6 +290,8 @@ li:not(.slash):hover {
 }
 .posterDiv {
 height: 120vh;
+margin: 0;
+padding-bottom: 150px;
 }
 .logoHeading {
     height: 100px;
@@ -508,17 +510,18 @@ margin: 0 auto;
 
 
 @media only screen and (min-width: 600px) {
-    :root {
-        --mainHeading: 32px;
-        --subHeading: 25px;
-        --smallFont: 15px;
-    }
+
     .navbar.mobile {
         display: none;
     }
 
     }
 @media only screen and (max-width: 600px){
+    :root {
+        --mainHeading: 32px;
+        --subHeading: 25px;
+        --smallFont: 15px;
+    }
     .logos {
         height: 1400px;
         width: 100vw;
@@ -528,7 +531,7 @@ margin: 0 auto;
     .posterDiv {
         height: 1100px;
         width: 100vw;
-        margin: 0;
+        padding-bottom: 0;
     }
     .otherLogos, .posters {
         height: 1100px;

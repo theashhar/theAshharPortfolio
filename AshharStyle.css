@@ -42,9 +42,7 @@ a {
 h1 {
     font-size: var(--mainHeading);
 }
-.heroText h1{
-    font-size: calc(var(--mainHeading)*1.2); 
-}
+
 body {
     background-color: var(--bgBolor);
     margin: 0;
@@ -367,6 +365,9 @@ width: 330px;
     font-size: small;
 }
 @media only screen and (min-width: 600px) {
+    .heroText h1{
+        font-size: calc(var(--mainHeading)*1.2); 
+    }
     .navbar.mobile {
         display: none;
     }
