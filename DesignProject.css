@@ -323,7 +323,7 @@ margin: 0 auto;
     background-color: var(--themeColor);
 }
 .pacificCalm, .aayu {
-    height: 30%;
+    height: 35%;
     width: 80%;
     display: flex;
     flex-direction: column;
