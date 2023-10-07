@@ -435,7 +435,7 @@
         bottom: 40px; 
     }
     .techStack.right {
-        width: 90%;
+        /* width: 90%; */
         justify-content: flex-end;
     }
 
@@ -484,6 +484,7 @@
             /* height: 1600px; */
             width: 80vw;
         }
+        
         .projectImg {
             width: 100%;
             opacity: 0.4;
@@ -508,7 +509,7 @@
             text-align: left;
         }
         .techStack {
-            width: 40%;
+            /* width: 40%; */
             gap: 12px;
             position: static;
             /* bottom: 40px;  */
