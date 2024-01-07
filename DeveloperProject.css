@@ -167,7 +167,7 @@
             opacity: 0.8;
         }
         .JS_electon {
-            width: 25%;
+            width: 30%;
             /* background-color: rgb(90, 106, 106);     */
             position: absolute;
             /* border: 1px dashed var(--themeColor); */
@@ -178,7 +178,7 @@
             .JS_electon::before{
                 content: url("Assets/js.svg");
                 filter: blur(1px);
-                width: 32px;
+                width: 40px;
                 position: absolute;
                 left: 0px;
                 top: 0px;    
@@ -188,26 +188,26 @@
             }
     
         .REACT_electon {
-                width: 50%;
+                width: 62%;
                 position: absolute;
                 /* background-color: #05333c;   */
                 padding: 110px;
                 /* border-radius: 50%; */
-                animation: rotationClock 17s infinite linear;
+                animation: rotationClock 8s infinite linear;
             }
             .REACT_electon::before{
-                content: url("Assets/reactjs.svg");
-                filter: blur(0.7px);
-                width: 30px;
+                content: url("Assets/reactNative.svg");
+                /* filter: blur(0.7px); */
+                width: 66px;
                 position: absolute;
-                left: 0px;
+                right: 0px;
                 bottom: 0px;
                 border-radius: 50%;
                 animation: rotationAntiClock 8s infinite linear;
                 opacity: 0.8;
             }
         .CSS_electon {
-                width: 60%;
+                width: 75%;
                 /* background-color: rgb(90, 106, 106); */
                 position: absolute;
                 /* border: 12px dotted deeppink; */
@@ -217,8 +217,8 @@
             }
             .CSS_electon::before{
                 content: url("Assets/css.svg");
-                filter: blur(1px);
-                width: 26px;
+                /* filter: blur(1px); */
+                width: 34px;
                 /* background-color: deeppink; */
                 position: absolute;
                 left: 0px;        
@@ -227,8 +227,18 @@
                 animation: rotationAntiClock 15s infinite linear;
                 opacity: 0.7;
             }
+            .CSS_electon::after{
+                content: url("Assets/reactjs.svg");
+                width: 48px;
+                position: absolute;
+                left: 0px;        
+                bottom: 100px;
+                border-radius: 90px;
+                animation: rotationAntiClock 15s infinite linear;
+                opacity: 0.7;
+            }
         .HTML_electon {
-                width: 75%;
+                width: 90%;
                 /* background-color: rgb(90, 106, 106); */
                 position: absolute;
                 padding: 110px;
@@ -238,7 +248,7 @@
             .HTML_electon::before{
                 content: url("Assets/html.svg");
                 filter: blur(1px);
-                width: 20px;
+                width: 28px;
                 position: absolute;
                 right: 0px;        
                 top: -50px;
@@ -309,7 +319,7 @@
         align-items: center;
     }
 .featuredProjects {
-    height: 1600px;
+    height: 2100px;
     width: 70vw;
     padding: 0 40px;
     display: flex;
@@ -381,6 +391,7 @@
         exclusion */
         transition: all 0.3s cubic-bezier(.43,.28,0,1.01);
     }
+
     .projectImg:hover::after {
         opacity: 0;
     transform: scale(1.1);
