@@ -55,8 +55,6 @@ body {
     display: flex;
         justify-content: space-between;
     margin: 1vh 0 11vh 0px;
-    /* padding: 0 20px 0 20px; */
-
 }
 .logo {
     width: 160px;
@@ -83,10 +81,14 @@ li {
  border: 1px solid var(--themeColor);
  border-radius: 4px;
  padding: 8px;
- background-color: var(--bgBolor);
+ background-color: var(--themeColor);
  font-size: var(--smallFont);
  transition: 0.2s cubic-bezier(.43,.28,0,1.01) ;
-}  
+}
+.resume.nav {
+    background-color: var(--bgBolor);
+
+}
 li:not(.slash, .resume)::after {
     content:'';
     position: absolute;
@@ -143,24 +145,16 @@ width: 330px;
 transition: 0.4s cubic-bezier(.43,.28,0,1.01);
 
 }
-/* .mainImage {
-position: relative;
-} */
+
 
 .mainImage img:hover {
     content: url("Assets/mainPhoto1.png");
-    /* opacity: 0; */
 transform: scale(1.03);
 cursor: pointer;
 }
 .heroText {
     width: 35%;
 }
-
-/* #name {
-    position: relative;
-} */
-
 #code {
     font-family: monospace;
     font-size: var(--subHeading);
@@ -443,17 +437,15 @@ cursor: pointer;
         font-size: medium;
     }
     .servicesContainer {
-        height: 900px;
-        /* margin-top: 150px; */
+        height: 1300px; /* increase this to add services */
         padding-top: 160px;
-
     }
     .services {
         height: 100%;
         width: 75vw;
     }
     .servicesBox {
-        height: 50%;
+        height: 60%; /* & increase this to add services  */
         width: 80%;
         flex-direction: column;
         justify-content: center;

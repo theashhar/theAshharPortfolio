@@ -25,3 +25,5 @@ function transitionSlide() {
   const headerItemsElement = document.querySelector('.headerItemsMobile')
   headerItemsElement.classList.toggle('open')
 }
+
+//resume pdf download
