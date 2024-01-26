@@ -83,6 +83,8 @@ li {
  padding: 8px;
  background-color: var(--themeColor);
  font-size: var(--smallFont);
+ font-weight: 600;
+ text-shadow: 0px 0px 8px #161c1e;
  transition: 0.2s cubic-bezier(.43,.28,0,1.01) ;
 }
 .resume.nav {

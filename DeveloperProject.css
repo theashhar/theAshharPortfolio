@@ -318,8 +318,9 @@
         justify-content: center;
         align-items: center;
     }
+    /* change this to update project adn adjust height */
 .featuredProjects {
-    height: 2100px;
+    height: 2700px;
     width: 70vw;
     padding: 0 40px;
     display: flex;
@@ -351,7 +352,7 @@
         margin-bottom: 150px;
     }
     .projectImg {
-        height: 100%;
+        height: 105%;
         width: 60%;
         object-fit: cover;
         position: absolute;
@@ -379,7 +380,7 @@
         z-index: 2;
         opacity: 0.3;
         border-radius: 8px;
-        mix-blend-mode: color-burn;
+        mix-blend-mode: multiply;
         /* screen
         overlay
         soft-light
@@ -404,8 +405,8 @@
         right: 0;
     }
     .textDiv {
-        height: 100%;
-        width: 50%;
+        height: 105%;
+        width: 55%;
         position: absolute;
         display: flex;
             flex-direction: column;
@@ -457,7 +458,7 @@
     }
     .techStack.links {
         position: absolute;
-        bottom: 10px;
+        bottom: 0px;
     }
     .techStack.links.right{
         justify-content: flex-end;
@@ -529,7 +530,7 @@
             justify-content: flex-start;
         }
         .techStack.links {
-            position: static;
+            bottom: -20px;
         }
         .techStack.links.right{
             justify-content: flex-start;
