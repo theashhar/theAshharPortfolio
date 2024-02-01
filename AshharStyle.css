@@ -206,11 +206,6 @@ cursor: pointer;
 .slider img:not(.moreHeight, .square), .slide2 img:not(.moreHeight, .square){
     height: 100%
 }
-.slider img {
-    /* filter: saturate(0%);
-    filter: hue-rotate(90deg); */
-
-  }
 .slider img:hover {
     /* filter: saturate(100%); */
     scale: 1.1;
