@@ -451,12 +451,29 @@ margin: 0 auto;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--hoverColor);
-    color: #fff;
+    /* background-color: var(--hoverColor); */
+    color: #000000;
     border: none;
-    padding: 15px 10px;
+    padding: 10% 5px;
     cursor: pointer;
-    opacity: .8;
+    opacity: .3;
+    mix-blend-mode: difference;
+    /* 'normal',
+    'multiply',
+    'screen',
+    'overlay',
+    'darken',
+    'lighten',
+    'color-dodge',
+    'color-burn',
+    'hard-light',
+    'soft-light',
+    'difference',
+    'exclusion',
+    'hue',
+    'saturation',
+    'color',
+    'luminosity' */
   }
   
   .prev-button, .prev-button2 {
