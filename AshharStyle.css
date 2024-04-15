@@ -86,6 +86,7 @@ li {
  font-weight: 600;
  text-shadow: 0px 0px 8px #161c1e;
  transition: 0.2s cubic-bezier(.43,.28,0,1.01) ;
+ cursor: pointer;
 }
 
 .resume.nav {
@@ -445,7 +446,7 @@ cursor: pointer;
         font-size: medium;
     }
     .servicesContainer {
-        height: 1300px; /* increase this to add services */
+        height: 1100px; /* increase this to add services */
         padding-top: 160px;
     }
     .services {
