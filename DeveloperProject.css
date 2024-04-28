@@ -358,13 +358,13 @@
 .responsibilityDot{
     /* position: absolute; */
     position: relative;
-    height: 26px;
-    width: 26px;
+    height: 24px;
+    width: 24px;
     padding: 2px;
     background-color: var(--themeColor);
     border-radius: 100%;
-    margin: 20px;
-    margin-right:50px ;
+    margin-top: 22px;
+    margin-right:10px ;
 }
 
 
@@ -372,7 +372,7 @@
     content:'';
     position: absolute;
     top: 22px;
-    left: 215px;
+    left: 13px;
     height: 100%;
     border: 1px dashed var(--themeColor);
 }        
@@ -555,17 +555,11 @@
             height: 20px;
             width: 20px;
             margin-top: 20px;
-            margin-left: 0px;
-            margin-right: 10px ;
+            margin-right:8px ;
         }
         h3{
             font-size: 16px;
         }
-        
-        .ResponsibilityDiv:not(.last):before {
-            left: 162px;
-            border: 1px dashed var(--themeColor);
-        }  
         .projectImg {
             width: 100%;
             opacity: 0.4;
