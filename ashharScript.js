@@ -8,6 +8,9 @@ function navbarSlide(e) {
   transitionSlide()
   toggleHamburger()
 }
+// const contactButton = document.getElementById('remoteSlideNav');
+// contactButton.addEventListener('click', navbarSlide);
+
 function toggleHamburger() {
   const hamburgerHam = document.querySelector('.hamburger.ham');
   const hamburgerCross = document.querySelector('.hamburger.cross');
@@ -26,4 +29,3 @@ function transitionSlide() {
   headerItemsElement.classList.toggle('open')
 }
 
-//resume pdf download

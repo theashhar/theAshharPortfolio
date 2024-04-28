@@ -331,12 +331,59 @@
         justify-content: center;
         align-items: center;
 }
+.featuredProjects.responsibility {
+    height: 800px;
+}
+.ResponsibilityInnerDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.ResponsibilityDiv{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.projectName.position {
+    width: 180px; 
+}
+.descriptionHead{
+    font-weight: bold;
+}
+.descriptionHead{
+    text-shadow: 0px 0px 18px #161c1e;
+
+}
+.responsibilityDot{
+    /* position: absolute; */
+    position: relative;
+    height: 26px;
+    width: 26px;
+    padding: 2px;
+    background-color: var(--themeColor);
+    border-radius: 100%;
+    margin: 20px;
+    margin-right:50px ;
+}
+
+
+.ResponsibilityDiv:not(.last):before {
+    content:'';
+    position: absolute;
+    top: 22px;
+    left: 215px;
+    height: 100%;
+    border: 1px dashed var(--themeColor);
+}        
+
     .ProjectHeading {
         cursor: pointer;
         position: relative;
         top: 0;
         margin-bottom: 80px;    
         margin-top: 0;
+        text-align: center;
     }
     .ProjectHeading::after {
         content:'';
@@ -472,13 +519,13 @@
     }
 
 
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: 700px) {
         .navbar.mobile {
             display: none;
         }
     
         }
-    @media only screen and (max-width: 600px){
+    @media only screen and (max-width: 700px){
         :root {
             --mainHeading: 32px;
             --subHeading: 25px;
@@ -493,13 +540,32 @@
         }
           .projectImg::after {
             height: 110%;
-            /* display: none; */
           }
         .featuredProjects {
             /* height: 1600px; */
             width: 80vw;
         }
+        .featuredProjects.responsibility {
+            height: 1100px;
+        }
+        .projectName.position {
+            width: 150px; 
+        }
+        .responsibilityDot{
+            height: 20px;
+            width: 20px;
+            margin-top: 20px;
+            margin-left: 0px;
+            margin-right: 10px ;
+        }
+        h3{
+            font-size: 16px;
+        }
         
+        .ResponsibilityDiv:not(.last):before {
+            left: 162px;
+            border: 1px dashed var(--themeColor);
+        }  
         .projectImg {
             width: 100%;
             opacity: 0.4;
@@ -519,21 +585,20 @@
         }
         .projectDescription {
             width: 80%;
+            padding: 12px;
         }
         .projectDescription.right{
             text-align: left;
         }
         .techStack {
-            /* width: 40%; */
             gap: 12px;
             position: static;
-            /* bottom: 40px;  */
         }
         .techStack.right {
             justify-content: flex-start;
         }
         .techStack.links {
-            bottom: -20px;
+            bottom: -25px;
         }
         .techStack.links.right{
             justify-content: flex-start;
