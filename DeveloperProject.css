@@ -308,11 +308,9 @@
     .socialIcons img {
         width: 15px;
     }
-    
     .vLine {
         width: 20%;
         border: 1px dashed aliceblue;
-        /* background-color: aliceblue; */
     }
 
 .featuredProjectsDiv {
@@ -362,7 +360,7 @@
     padding: 2px;
     background-color: var(--themeColor);
     border-radius: 100%;
-    margin-top: 20px;
+    margin-top: 18px;
     margin-right:10px ;
 }
 
@@ -487,7 +485,6 @@
     }
     .techStack {
         width: 90%;
-        /* height: 20%; */
         display: flex;
             flex-wrap: wrap;
             align-content: center;
@@ -496,7 +493,6 @@
         bottom: 40px; 
     }
     .techStack.right {
-        /* width: 90%; */
         justify-content: flex-end;
     }
 
@@ -556,10 +552,7 @@
             align-items: start;
         }
         .projectDescription.responsibility{
-            margin-left: 32px; 
-        }
-        h3{
-            font-size: 16px;
+            margin-left: 38px; 
         }
         .projectImg {
             width: 100%;

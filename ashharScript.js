@@ -29,3 +29,10 @@ function transitionSlide() {
   headerItemsElement.classList.toggle('open')
 }
 
+window.addEventListener('load', function() {
+  // After 3 seconds, add a class to activate the hover effect
+  setTimeout(function() {
+      var mainImage = document.querySelector('.mainImage');
+      mainImage.classList.add('activateHover');
+  }, 2000); // 3000 milliseconds = 3 seconds
+});

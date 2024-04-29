@@ -143,7 +143,7 @@ li:not(.slash):hover {
     margin: 0 0 8vh 0;
 }
 
-.mainImage img {
+.mainImage {
 width: 330px;
 transition: 0.4s cubic-bezier(.43,.28,0,1.01);
 filter: hue-rotate(180deg); 
@@ -152,7 +152,7 @@ filter: hue-rotate(180deg);
 }
 
 
-.mainImage img:hover {
+.mainImage:hover {
     filter: hue-rotate(0deg); 
     transform: scale(1.03);
 cursor: pointer;
@@ -410,11 +410,13 @@ cursor: pointer;
             justify-content: space-around;
             align-items: center;
         position: relative;
-        /* margin: 0 0 8vh 0; */
-
     }
-    .mainImage img {
+    .mainImage {
         width: 200px;
+        }
+    .mainImage.activateHover {
+            filter: hue-rotate(0deg); 
+            transform: scale(1.06);
         }
     .heroText {
     width: 90%;
