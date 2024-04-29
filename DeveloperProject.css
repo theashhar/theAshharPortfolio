@@ -356,14 +356,13 @@
 
 }
 .responsibilityDot{
-    /* position: absolute; */
     position: relative;
     height: 24px;
     width: 24px;
     padding: 2px;
     background-color: var(--themeColor);
     border-radius: 100%;
-    margin-top: 22px;
+    margin-top: 20px;
     margin-right:10px ;
 }
 
@@ -472,7 +471,7 @@
     .textDiv h2 {
         margin-bottom: 0;
     }
-    .Projectsubtitle {
+    .projectSubtitle {
         margin-top: 0;
         font-size: small;
     }
@@ -549,13 +548,15 @@
             height: 1100px;
         }
         .projectName.position {
-            width: 150px; 
+            width: 100%; 
         }
-        .responsibilityDot{
-            height: 20px;
-            width: 20px;
-            margin-top: 20px;
-            margin-right:8px ;
+
+        .ResponsibilityDiv{
+            flex-direction: column;
+            align-items: start;
+        }
+        .projectDescription.responsibility{
+            margin-left: 32px; 
         }
         h3{
             font-size: 16px;
