@@ -319,9 +319,9 @@
         justify-content: center;
         align-items: center;
     }
-    /* change this to update project adn adjust height */
+    /* change this to update project and adjust height */
 .featuredProjects {
-    height: 2700px;
+    height: 3400px;
     width: 70vw;
     padding: 0 40px;
     display: flex;
@@ -330,7 +330,7 @@
         align-items: center;
 }
 .featuredProjects.responsibility {
-    height: 800px;
+    height: 850px;
 }
 .ResponsibilityInnerDiv{
     display: flex;
@@ -345,6 +345,8 @@
 }
 .projectName.position {
     width: 180px; 
+    padding-top: 0;
+
 }
 .descriptionHead{
     font-weight: bold;
@@ -392,7 +394,7 @@
         background-color: var(--themeColor);
     }
     .project {
-        height: 330px; /*(effective = 450px)*/
+        height: 400px; /*(effective = 450px)*/
         width: 100%;
         position: relative;
         /* background-color: rgb(64, 64, 64); */
@@ -490,7 +492,8 @@
             align-content: center;
         gap: 15px;
         position: absolute;
-        bottom: 40px; 
+        bottom: 40px;
+        z-index: 3;
     }
     .techStack.right {
         justify-content: flex-end;
@@ -512,7 +515,33 @@
     .techStack.links img {
         width: 20px;
     }
+    .pulse {
+        position: absolute;
+        top: -10px;
+        /* background-color: var(--selectColor);
+        border-radius: 4px;
+        padding: 4px; */
+        color: var(--themeColor);
+        font-size: x-small;
+        cursor: default;
+        z-index: 5;
+        animation: pulse 1.5s infinite ease-in-out;
+    }
+    .pulse.right {
+        right: 0px;
+    }
 
+    @keyframes pulse {
+        0% {
+            opacity: 1;
+        }
+        30% {
+            opacity: 0.2;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
 
     @media only screen and (min-width: 700px) {
         .navbar.mobile {
@@ -586,13 +615,21 @@
             justify-content: flex-start;
         }
         .techStack.links {
-            bottom: -25px;
+            bottom: -50px;
         }
         .techStack.links.right{
             justify-content: flex-start;
         }
         .socialIcons {
             width: 85%;
+        }
+        .projectName {
+            padding-top: 16px;
+        }
+        .pulse {
+            left: 16px;
+            top: 0px;
+            color: white;
         }
 
 
