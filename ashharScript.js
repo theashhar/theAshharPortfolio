@@ -37,8 +37,10 @@ window.addEventListener('load', function() {
   }, 2000); // 3000 milliseconds = 3 seconds
 });
 
-// Load Google Analytics Script Dynamically
-if (typeof GA_MEASUREMENT_ID !== 'undefined' && GA_MEASUREMENT_ID) {
+// Fetch the Google Analytics ID from a meta tag (injected via Vercel env variables)
+const GA_MEASUREMENT_ID = document.querySelector('meta[name="ga-id"]').content;
+
+if (GA_MEASUREMENT_ID) {
   // Load the Google Analytics library
   const script1 = document.createElement('script');
   script1.async = true;
