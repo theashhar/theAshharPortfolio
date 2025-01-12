@@ -321,7 +321,7 @@
     }
     /* change this to update project and adjust height */
 .featuredProjects {
-    height: 3400px;
+    height: 3000px;
     width: 70vw;
     padding: 0 40px;
     display: flex;
@@ -569,8 +569,10 @@
             /* height: 1600px; */
             width: 80vw;
         }
+            /* change this to update project and adjust height */
+
         .featuredProjects.responsibility {
-            height: 1600px;
+            height: 1400px;
         }
         .projectName.position {
             width: 100%; 
