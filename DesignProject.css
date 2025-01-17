@@ -33,6 +33,23 @@ a {
     --selectColor: #44535b;
     --hoverColor: #05333c;
 }
+iframe {
+    display: block;
+    margin: 80px auto;
+    width: 80vw;
+    max-width: 900px; /* Limit video width */
+    height: auto; /* Maintain 16:9 aspect ratio */
+    border: none;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 15px 5px rgba(40, 193, 224, 0.2);  */
+    /* Add white glow */
+    aspect-ratio: 16/9;
+}
+iframe:hover{
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 35px 5px rgba(40, 193, 224, 0.2); /* Add white glow */
+
+}
+
 .Designhero h1 {
     font-size: var(--mainHeading);
 }
@@ -545,13 +562,16 @@ margin: 0 auto;
     .logos {
         height: 1400px;
         width: 100vw;
-        margin: 200px 0 0 0;
+        margin: 150px 0 0 0;
         /* margin-bottom: 200px; */
     }
     .posterDiv {
         height: 1100px;
         width: 100vw;
         padding-bottom: 0;
+    }
+    iframe {
+        width: 90vw;
     }
     .otherLogos, .posters {
         height: 1100px;
