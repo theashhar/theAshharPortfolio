@@ -322,7 +322,7 @@
     }
     /* change this to update project and adjust height */
 .featuredProjects {
-    height: 3000px;
+    height: 3200px;
     width: 70vw;
     padding: 0 40px;
     display: flex;
@@ -637,7 +637,7 @@
             /* change this to update project and adjust height */
 
         .featuredProjects.responsibility {
-            height: 1400px;
+            height: 1500px;
         }
         .OtherProjectsParent {
             height: 800px;
