@@ -395,7 +395,7 @@
 
 }
 .featuredProjects.responsibility {
-    height: 1200px;  /* increase this to add more experience */
+    height: 1800px;  /* increase this to add more experience */
 }
 .ResponsibilityInnerDiv{
     display: flex;
@@ -637,7 +637,7 @@
             /* change this to update project and adjust height */
 
         .featuredProjects.responsibility {
-            height: 1500px;
+            height: 1800px;
         }
         .OtherProjectsParent {
             height: 1200px;
