@@ -138,17 +138,17 @@ li:not(.slash):hover {
 .hero {
     height: 72vh;
     width: 100vw;
-    display: flex;
+    display: flex ;
+    flex-direction: row-reverse;
         justify-content: space-evenly;
-    margin: 0 0 8vh 0;
+    margin: 0 64px 8vh 0;
 }
 
 .mainImage {
-width: 330px;
+width: 360px;
 transition: 0.4s cubic-bezier(.43,.28,0,1.01);
 filter: hue-rotate(180deg); 
-
-
+margin: 0 64px 0 0;
 }
 
 
@@ -413,6 +413,7 @@ cursor: pointer;
     }
     .mainImage {
         width: 200px;
+        margin: 0 24px 0 0;
         }
     .mainImage.activateHover {
             filter: hue-rotate(0deg); 
